@@ -1,42 +1,43 @@
-# Create React Express App
+# New York Times Article Search
+This is a React.js app that allows users to search for New York Times articles. After performing a search, the user will see article results including the name of the article, the date and time of publishing, and a button linking to the article source. Finally, users are able to add and remove articles from a saved articles section. The app uses Node/Express for the server and routing, MongoDB/Mongoose for the database and models
 
-## About This Boilerplate
+[Live Demo](https://blooming-peak-51918.herokuapp.com/)
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development. I will assume that you already have Node.js and MongoDB installed locally. See deployment for notes on how to deploy the project on a live system.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Install dependencies
+In your CLI, enter mongod
+In a new CLI window, go to root of directory and enter node server.js
+In a third CLI window, go to root and enter yarn start. This will start the webpack dev server.
+Your browser should automatically open a new tab containing the app.
 
-## Starting the app locally
+Dependencies
+You will need to yarn install the following node modules:
 
-Start by installing front and backend dependencies. While in this directory, run the following commands:
+express
+mongoose
+body-parser
+axios
+react
+react-dom
+react-router-dom
+react-scripts
+Since I have included two package.json files, you do not need to install dependencies by name. Simply run the following in the root of your directory as well as in the Client folder:
 
-```
 yarn install
-cd client
-yarn install
-cd ..
-``
+Deployment
+Follow these instructions to deploy your app live on Heroku
 
-After both installations complete, run the following command in your terminal:
+Create a heroku app in your project directory
 
-```
-yarn start
-```
+heroku create <projectName>
+Provision mLab MongoDB add-on for your project
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+heroku addons:create mongolab
+Deploy the app
 
-## Deployment (Heroku)
+yarn deploy
+Now your project should be successfully deployed on heroku.
 
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
 
-1. Build the React app for production by running the following command:
-
-```
-yarn build
-```
-
-2. Add and commit all changes to git
-
-3. Push to Heroku
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
