@@ -32,6 +32,7 @@ class Main extends Component {
           beginDate: '',
           endDate: ''
         });
+        
       })
       .catch(err => console.log(err));
   };
